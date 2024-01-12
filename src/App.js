@@ -10,12 +10,7 @@ import LoaderAnimation from './LoaderAnimation';
 import CustomCursor from './CustomCursor';
 import Gallery from './components/GallaryGrid/Gallery';
 import Home from './components/Home';
-import ChooseNavbar from './ChooseNavbar';
-import Main from './components/Main';
-import ChooseProject from './components/ProjectComponent/ChooseProject';
-import ChooseContact from './components/ContactComponent/ChooseContact';
-import ChooseAboutMe from './ChooseAboutMe';
-import ChooseFooter from './components/ChooseFooter/ChooseFooter';
+
 
 function App() {
   const [ loading, setLoading ] = useState(true);

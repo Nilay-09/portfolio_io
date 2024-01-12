@@ -5,7 +5,7 @@ import Screen1300 from './HomepageRes/Screen1300';
 
 export default function Main() {
     return (
-        <div className="Homepage  relative" id='home'>
+        <div className="Homepage relative" id='home'>
 
             <Media queries={{
                 small: "(max-width: 599px)",

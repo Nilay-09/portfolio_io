@@ -52,7 +52,7 @@ export default function MobileNavbar() {
       // style={{ zIndex: 1 }}
       >
         {/* Menu content */}
-        <div className="MenuBar w-full flex justify-center items-center text-black flex-col pt-[10rem]  ">
+        <div className="MenuBar w-full flex justify-center items-center text-black flex-col pt-[7rem]  ">
           {/* Menu items with smooth scrolling */}
           {[
             { text: 'Home', target: 'home' },
