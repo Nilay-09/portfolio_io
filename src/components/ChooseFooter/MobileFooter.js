@@ -27,16 +27,23 @@ export default function MobileFooter() {
             <div className="flex flex-col justify-start ml-[1.5rem] mt-[1.9375rem]">
 
                 <div className="text-[#6698fa] text-[32px] font-bold font-PT-Serif">Let’s Build Together</div>
-                <form className="flex flex-col max-w-[300px]">
+                <form
+                    method="POST"
+                    action="https://formspree.io/f/xnqenpwo"
+                    className="flex flex-col max-w-[300px]">
                     <div className="relative">
                         <div className="flex max-w-[17.25rem] mt-[2.125rem]">
                             <input
                                 type="email"
+                                name="email"
                                 required
                                 className="h-full border-none p-2 outline-none bg-transparent text-[#6698fa] text-[1.5rem] font-light font-['Poppins'] placeholder-style "
                                 placeholder="Email Address"
                             />
-                            <img src={Arr} alt="" className='w-[4.125rem]' />
+                            <button type='submit'>
+                                <img src={Arr} alt="" className='w-[4.125rem]' />
+                            </button>
+
                         </div>
                         <div className="w-[264px] h-[0px] border border-[#6698fa]"></div>
 
@@ -44,6 +51,7 @@ export default function MobileFooter() {
                     </div>
                     <div className="relative mt-[1.5rem]">
                         <textarea
+                            name="message"
                             className=" max-h-[7.125rem] h-[2.575rem] 
                             w-full text-opacity-80
                             border-none p-2 outline-none bg-transparent text-[#6698fa] text-[1.5rem] font-light font-['Poppins'] placeholder-style "

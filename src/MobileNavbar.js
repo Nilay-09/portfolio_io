@@ -57,7 +57,6 @@ export default function MobileNavbar() {
           {[
             { text: 'Home', target: 'home' },
             { text: 'Projects', target: 'projects' },
-            { text: 'Contact', target: 'contact' },
             { text: 'About', target: 'about' },
           ].map((item, index) => (
             <ScrollLink
