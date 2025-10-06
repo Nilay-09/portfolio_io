@@ -23,13 +23,31 @@ export default function MobileNavbar() {
     window.location.href = process.env.REACT_APP_PUBLIC_URL + '/gallery';
   };
 
-  const handleResumeDownload = () => {
-    const resumeUrl = process.env.REACT_APP_PUBLIC_URL + '/resume.pdf';
-
-    const anchor = document.createElement('a');
-    anchor.href = resumeUrl;
-    anchor.download = 'resume.pdf';
-    anchor.click();
+  const handleResumeDownload = async () => {
+    try {
+      const resumeUrl = `${process.env.PUBLIC_URL || ''}/resume.pdf`;
+      
+      // Fetch the PDF as a blob
+      const response = await fetch(resumeUrl);
+      if (!response.ok) throw new Error('Failed to fetch resume');
+      
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      
+      // Create and trigger download
+      const anchor = document.createElement('a');
+      anchor.href = blobUrl;
+      anchor.download = 'resume.pdf';
+      document.body.appendChild(anchor);
+      anchor.click();
+      
+      // Cleanup
+      document.body.removeChild(anchor);
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      alert('Failed to download resume. Please try again.');
+    }
   };
 
   return (
